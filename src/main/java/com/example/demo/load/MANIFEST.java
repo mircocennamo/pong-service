@@ -13,10 +13,10 @@ import static java.lang.System.out;
 
 /**
  * @author mirco.cennamo on 17/06/2024
- * @project ping
+ * @project
  */
 @Configuration
-public class Load {
+public class MANIFEST {
     private static final String NO_MANIFEST_DETAILS_MESSAGE = "No manifest file found. Did you build the package using Maven?";
     @Bean
     CommandLineRunner initDatabase() {

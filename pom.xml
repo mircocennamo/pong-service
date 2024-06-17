@@ -29,9 +29,9 @@
 
 
   <scm>
-    <url>https://github.com/mircocennamo/ping.git</url> <!-- URL HTTP de clone do projeto -->
-    <connection>scm:git:https://github.com/mircocennamo/ping.git</connection> <!-- URL HTTP de clone do projeto -->
-    <developerConnection>scm:git:https://github.com/mircocennamo/ping.git</developerConnection> <!-- URL HTTP de clone do projeto -->
+    <url>https://github.com/mircocennamo/ping.git</url>
+    <connection>scm:git:https://github.com/mircocennamo/ping.git</connection>
+    <developerConnection>scm:git:https://github.com/mircocennamo/ping.git</developerConnection>
     <tag>@{project.version}</tag>
   </scm>
   <dependencies>
@@ -47,16 +47,6 @@
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-web</artifactId>
     </dependency>
-
-    <!-- https://mvnrepository.com/artifact/org.codehaus.mojo/build-helper-maven-plugin -->
-    <!--<dependency>
-      <groupId>org.codehaus.mojo</groupId>
-      <artifactId>build-helper-maven-plugin</artifactId>
-      <version>3.6.0</version>
-      <type>maven-plugin</type>
-    </dependency>-->
-
-
 
   </dependencies>
 
