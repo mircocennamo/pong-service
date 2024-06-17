@@ -9,7 +9,7 @@
   </parent>
   <groupId>it.interno.log</groupId>
   <artifactId>ping-service</artifactId>
-  <version>0.1.1-SNAPSHOT</version>
+  <version>0.1.1</version>
   <name>log-service</name>
   <description>Microservizio per ping</description>
   <properties>
@@ -32,7 +32,7 @@
     <url>https://github.com/mircocennamo/ping.git</url> <!-- URL HTTP de clone do projeto -->
     <connection>scm:git:https://github.com/mircocennamo/ping.git</connection> <!-- URL HTTP de clone do projeto -->
     <developerConnection>scm:git:https://github.com/mircocennamo/ping.git</developerConnection> <!-- URL HTTP de clone do projeto -->
-    <tag>@{project.version}</tag>
+    <tag>0.1.1</tag>
   </scm>
   <dependencies>
 
