@@ -91,10 +91,21 @@
         <version>3.0.1</version>
         <configuration>
           <tagNameFormat>@{project.version}</tagNameFormat>
+          <autoVersionSubmodules>true</autoVersionSubmodules>
+          <releaseProfiles>releases</releaseProfiles>
          </configuration>
       </plugin>
 
     </plugins>
   </build>
+
+
+  <distributionManagement>
+    <repository>
+      <id>nexus</id>
+      <url>http://localhost:8081/nexus/content/repositories/releases</url>
+    </repository>
+  </distributionManagement>
+
 
 </project>
