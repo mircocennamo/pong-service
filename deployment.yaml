@@ -1,0 +1,66 @@
+kind: Namespace
+apiVersion: v1
+metadata:
+  name: test
+  labels:
+    name: test
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pong-service
+  #namespace: test
+  labels:
+    app: pong-service
+
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: pong-service
+  template:
+    metadata:
+      labels:
+        app: pong-service
+    spec:
+
+      containers:
+        - name: pong-service
+          image: mircocennamo/miorepo:0.0.8-SNAPSHOT
+          ports:
+            - containerPort: 8090
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: pong-service
+  #namespace: test
+  labels:
+    app: pong-service
+    spring-boot: "true"
+spec:
+  type: ClusterIP
+  selector:
+    app: pong-service
+  ports:
+    - protocol: TCP
+      port: 8090
+
+---
+#apiVersion: networking.k8s.io/v1
+#kind: Ingress
+#metadata:
+#  name: ping-service-my-ingress
+#  namespace: test
+#spec:
+#  rules:
+#    - host: my-ping.example.com
+#      http:
+#        paths:
+#          - path: /
+#            pathType: Prefix
+#            backend:
+#              service:
+#                name: ping-service-loadbalancer
+#                port:
+#                  number: 8089
